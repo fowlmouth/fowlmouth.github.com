@@ -1,0 +1,130 @@
+---
+# Jekyll wants this YAML front matter to parse the document.
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Pry - an IRB alternative and runtime developer console</title>
+    <meta name="description" content="Pry is a powerful alternative to the standard IRB shell for Ruby.">
+
+    <link href="http://fonts.googleapis.com/css?family=Maven+Pro&v1" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" tutle="Sunburst" href="http://yandex.st/highlightjs/6.0/styles/sunburst.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    
+    <style type="text/css">
+      div.video {
+        width: 450px; max-width: 250px;
+        display: block; /* either this or table-cell? */
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrap">
+
+      <header>
+        <div id="logo">
+          <h1>Pry — Get to the Code</h1>
+          <img src="/images/pry_logo.png" alt="Pry Ruby Logo"/>
+        </div>
+
+        <p class="infobox">
+          Pry is a <em>powerful</em> alternative to the standard IRB shell for
+          Ruby.  It features <em>syntax highlighting</em>, a flexible <em>plugin
+            architecture</em>, <em>runtime invocation</em> and  <em>source and
+            documentation browsing</em>.
+        </p>
+
+        {% include navigation.html %}
+      </header>
+
+      <article>
+        <h1>Screencasts</h1>
+        
+        <p>
+          
+        </p>
+
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/26391171?title=0&amp;byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+          <p>
+            <a href="http://vimeo.com/26391171">Pry Screencast</a> from 
+            <a href="http://vimeo.com/user3374111">Joshua Cheek</a> on 
+            <a href="http://vimeo.com">Vimeo</a>.
+          </p>
+        </div>
+        
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/23535249?title=0&amp;byline=0&amp;portrait=0" width="400" height="245" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+          <p>
+            <a href="http://vimeo.com/23535249">A basic introduction to using Pry, an IRB alternative for Ruby</a>
+            from <a href="http://vimeo.com/user1347131">banister fiend</a>
+            on <a href="http://vimeo.com">Vimeo</a>.
+          </p>
+        </div>
+        
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/23634437?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+          <p>
+            <a href="http://vimeo.com/23634437">Pry at runtime demonstration</a> from <a href="http://vimeo.com/user1347131">banister fiend</a> on <a href="http://vimeo.com">Vimeo</a>.
+          </p>
+          <p>
+            Note this video should be watched after the "Introduction to Pry" screencast found here: http://vimeo.com/26391171<br />
+            <br />
+            Visit the Pry website: http://pry.github.com<br />
+            <br />
+            Demonstration of invoking a Pry session at runtime to modify and develop a game while the game is running.
+          </p>
+        </div>
+      </article>
+      
+      <article>
+        <a href="http://railscasts.com/episodes/280-pry-with-rails"><h1>Railscasts</h1></a>
+        <!--
+        <div class="video">
+          <h3><a hef="http://railscasts.com/episodes/280-pry-with-rails">Pry railscast</a></h3>
+          <p>
+            <!-- railscasts.com doesnt make it easy to embed a video, I think its hidden behind
+            some laem javascript //--
+          </p>
+          
+        </div>
+        //-->
+      </article>
+
+    <footer>
+      <p>
+        Pry comes to you from the mind of <a href="https://github.com/banister">John Mair</a> who also brought you
+        <a href="https://github.com/banister/texplay">TexPlay</a>,
+        <a href="https://github.com/banister/method_source">MethodSource</a>,
+        <a href="https://github.com/banister/devil">Devil</a>,
+        <a href="https://github.com/banister/remix">Remix</a> &amp;
+        <a href="https://github.com/banister/free">Free</a>.
+      </p>
+
+      <p>
+        <a href="http://ippa.se">HTML5 by ippa</a> |
+        Pry logo by <a href="http://www.studiokun.co.cc">STUDIOKUN</a>
+      </p>
+    </footer>
+
+    <script src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
+    <script>
+      function $(selector){
+        var elements = Array.prototype.slice.call( document.querySelectorAll(selector) )
+        var items = selector.split(" ")
+        return (items[items.length-1][0] == "#") ? elements[0] : elements // Return single element if fetching a
+      }
+      $("code").forEach( function(tag) {
+        tag.innerHTML = tag.innerHTML.replace(/^\n/, "")
+        hljs.highlightBlock(tag, '    ');
+      });
+    </script>
+  </body>
+</html>
